@@ -1,0 +1,308 @@
+/* Reset and base styles  */
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul, ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+legend {
+    display: block;
+}
+/* End reset */
+
+a:active, /* активная/посещенная ссылка */
+a:hover,  /* при наведении */
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+body{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("/img/background.jpg");
+}
+
+.menu{
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0 0 0;
+    font-size: 23px;
+    align-items: center;
+}
+
+.menu_left{
+    margin: 0 0 0 80px;
+}
+
+.menu_center{
+    display: flex;
+    padding: 0 15px 0 15px;
+}
+
+.menu_center a{
+    margin: 0 15px 0 0;
+
+}
+
+.menu_right{
+    display: flex;
+    justify-content: end;
+    margin: 0 120px 0 0;
+}
+
+.menu_right a{
+    margin: 0 30px 0 15px;
+}
+
+a {
+    background-image: linear-gradient(
+            to right,
+            #7d62ef,
+            #7d62ef 50%,
+            #FFFFFF 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+a:before{
+    content: '';
+    background: #7d62ef;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+    background-position: 0;
+}
+
+a:hover::before{
+    width: 100%;
+}
+
+body{
+    max-height: 100vh;
+}
+main{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* hexagon */
+
+
+.hexagon {
+    padding: 250px 0 0 0;
+    justify-content: center;
+    --s: 50px; /* control the size */
+    --g: 10px;  /* control the gap */
+    display: grid;
+    margin: calc(var(--s) + var(--g));
+}
+
+.hexagon > div {
+    grid-area: 1/1;
+    width: var(--s);
+    aspect-ratio: 0.866;
+    object-fit: cover;
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);;
+    transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
+    cursor: pointer;
+    filter: grayscale(80%);
+    transition: .2s linear;
+    background: #FFFFFF;
+    height: var(--s);;
+}
+
+.hexagon > div:hover {
+    filter: grayscale(0);
+    z-index: 1;
+    --_t: 1.1;
+}
+
+
+.hexagon > div:nth-child(1) {--_x: calc(165% - var(--g)); --_y: calc(-90% - .87*var(--g))}
+.hexagon > div:nth-child(2) {--_x: calc(455% - var(--g)); --_y: calc(-210% - .87*var(--g))}
+.hexagon > div:nth-child(3) {--_x: calc(-50% - var(--g)); --_y: calc(45% - .87*var(--g))}
+.hexagon > div:nth-child(4) {--_x: calc(-170% - var(--g)); --_y: calc(210% - .87*var(--g))}
+.hexagon > div:nth-child(5) {--_x: calc(20% - var(--g)); --_y: calc(-30% - .87*var(--g))}
+
+.hexagon_small{
+padding: 50px;
+}
+
+.hexagon_middle{
+padding: 90px;
+}
+
+.hexagon_big{
+padding: 140px;
+}
+
+
+.versus_first{
+    display: flex;
+    position: relative;
+    margin-top: -21.8%;
+}
+
+
+
+.parallelogram_first {
+    width: 48vw;
+    height: 6.3vw;
+    clip-path: polygon(0 0, 100% 0, 92.7% 100%, 0 100%);
+    background: #FFFFFF;
+    position: relative;
+}
+
+.versus_second{
+    display: flex;
+    justify-content: end;
+}
+
+.parallelogram_second {
+    margin: 0.4% 0 0 0 ;
+    width: 42.9vw;
+    height: 6.3vw;
+    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);;
+    background: #FFFFFF;
+    position: relative;
+}
+
+.versus{
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+    font-size: 30px;
+    text-align: center;
+}
+
+.versus_first p{
+    padding: 4%;
+}
+
+.versus_second p{
+    padding: 5%;
+}
+
+
+
+#ticket{
+border-style: solid;
+    border-radius: 5%;
+    font-size: 22px;
+    padding: 5px;
+}
+
+#first_hex, #second_hex, #fourth_hex, #fifth_hex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+#third_hex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    font-weight: bolder;
+}
+
