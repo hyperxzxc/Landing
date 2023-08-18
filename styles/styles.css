@@ -101,7 +101,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: url("/img/background.jpg");
+    background-image: url("https://s1.hostingkartinok.com/uploads/images/2023/08/48d414932d217fac389570101c1bb1ea.jpg");
 }
 
 .menu{
@@ -132,7 +132,9 @@ body{
     display: flex;
     justify-content: end;
     margin: 0 120px 0 0;
+    padding: 0 0 0 15px;
 }
+
 
 .menu_right a{
     margin: 0 30px 0 15px;
@@ -306,3 +308,22 @@ border-style: solid;
     font-weight: bolder;
 }
 
+@media (max-width: 375px){
+    .parallelogram_first {
+        width: 42.9vw;
+        height: 6.3vw;
+        clip-path: polygon(0 0, 100% 0, 92.7% 100%, 0 100%);
+        background: #FFFFFF;
+        position: relative;
+    }
+
+
+    .parallelogram_second {
+        margin: 0.4% 0 0 0 ;
+        width: 42.9vw;
+        height: 6.3vw;
+        clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);;
+        background: #FFFFFF;
+        position: relative;
+    }
+}

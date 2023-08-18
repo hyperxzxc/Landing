@@ -46,12 +46,10 @@ function onWheel(e) {
     // onwheel || MozMousePixelScroll || onmousewheel
     var delta = e.deltaY || e.detail || e.wheelDelta;
 
-    console.log(delta);
+
     let middlehex = document.getElementById(arrhex[2]).textContent;
     if (middlehex !== start){
-        console.log(middlehex);
-        console.log(start);
-        console.log(end);
+
         if (delta == 100){ //наверх
         let arr = rigntShiftArrByOne(arrdates);
 
