@@ -44,13 +44,12 @@ function onWheel(e) {
     // deltaY, detail содержат пиксели
     // wheelDelta не дает возможность узнать количество пикселей
     // onwheel || MozMousePixelScroll || onmousewheel
-    var delta = e.deltaY || e.detail || e.wheelDelta;
-
+    var delta = e.deltaY || e.detail;
 
     let middlehex = document.getElementById(arrhex[2]).textContent;
     if (middlehex !== start){
 
-        if (delta == 100){ //наверх
+        if (delta > 0){ //наверх
         let arr = rigntShiftArrByOne(arrdates);
 
         arrdates = arr;
@@ -62,7 +61,7 @@ function onWheel(e) {
     }
     }
     if ( middlehex !== end){
-    if (delta == -100){ //наверх
+    if (delta < 0){ //наверх
         let arr = leftShiftArrByOne(arrdates);
 
         arrdates = arr;
